@@ -1,0 +1,153 @@
+.events-section {
+	padding: 10rem;
+	margin: 0 10rem;
+	background-color: $color-surface-primary;
+
+	border-top-left-radius: 10rem;
+	border-top-right-radius: 10rem;
+	font-size: 2.2rem;
+
+	.recent-event {
+		display: grid;
+		grid-template-columns: 65% 1fr;
+		gap: 5rem;
+
+		&__details {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+		}
+
+		&__join-btn {
+			padding: 2rem 3rem;
+			background-color: $color-surface-tertiary;
+			align-self: start;
+			border-radius: 3rem;
+
+			color: $color-accent-secondary;
+		}
+
+		&__impact-data {
+			display: flex;
+			gap: 5rem;
+			margin-top: 8rem;
+		}
+
+		&__data {
+			display: flex;
+			gap: 2.5rem;
+			align-items: center;
+			flex-basis: 35%;
+
+			.percentage {
+				padding: 4.5rem 3.3rem;
+				color: $color-accent-secondary;
+				background-color: $color-surface-tertiary;
+				border-radius: 6rem;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.upcoming-events {
+		margin-top: 15rem;
+		display: flex;
+		flex-direction: column;
+		gap: 8rem;
+
+		&__heading {
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+
+			flex: 0 0 auto;
+		}
+
+		&__cards {
+			display: flex;
+			gap: 5rem;
+			
+			.event-card {
+				border-radius: 10rem;
+				padding: 3rem;
+				background-color: $color-accent-primary;
+				
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 2.5rem;
+				flex-shrink: 0;
+				width: 55rem;
+
+				box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+					0 15px 40px rgba(166, 173, 201, 0.5);
+
+				.event-timestamp {
+					padding: 3rem 3.5rem;
+					border-radius: 20rem;
+					color: $color-accent-secondary;
+					background-color: $color-surface-tertiary;
+					text-align: center;
+
+					&::first-letter::before {
+						content: '\a';
+						white-space: pre;
+					}
+				}
+			}
+		}
+	}
+
+	.speakers-accolades {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-rows: repeat(4, max-content);
+		gap: 4rem;
+		padding: 8rem;
+		border-radius: 10rem;
+		background-color: $color-background;
+
+		&__heading {
+			grid-column: 1 / span 2;
+		}
+
+		.speaker-image {
+			margin-top: 2rem;
+			width: 15rem;
+			height: 15rem;
+			border-radius: 50%;
+
+			background-color: $color-accent-primary;
+
+			grid-row: 2/3;
+		}
+
+		.speaker-quote {
+			font-size: 2.4rem;
+			grid-row: 3/4;
+			grid-column: 1 / 6;
+		}
+
+		.next-previous {
+			grid-row: 4/-1;
+		}
+
+		img {
+			filter: invert(100%);
+		}
+	}
+
+	.button-collection {
+		display: flex;
+		gap: 3rem;
+
+		align-self: center;
+
+		img {
+			width: 4rem;
+		}
+	}
+}

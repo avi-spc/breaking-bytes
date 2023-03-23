@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FavoriteStories from './components/FavoriteStories';
+
+import StoriesContextProvider from './contexts/storiesContext';
 
 import Navbar from './components/Navbar';
 import SecondaryNavbar from './components/SecondaryNavbar';
 import Stories from './components/Stories';
-import StoriesContextProvider from './contexts/storiesContext';
+import FavoriteStories from './components/FavoriteStories';
+import Events from './components/Events';
 
 function App() {
 	return (
@@ -14,6 +16,7 @@ function App() {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Stories />}></Route>
+						<Route path="/events" element={<Events />}></Route>
 						<Route path="/favorites" element={<FavoriteStories />}></Route>
 					</Routes>
 					<SecondaryNavbar />
