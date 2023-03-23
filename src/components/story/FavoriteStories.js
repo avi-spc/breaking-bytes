@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { StoriesContext } from '../contexts/storiesContext';
+import { StoriesContext } from '../../contexts/storiesContext';
 
 import StoriesCollection from './StoriesCollection';
 

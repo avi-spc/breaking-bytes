@@ -59,17 +59,12 @@ input {
 	width: 100%;
 
 	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
-	border-radius: 4rem;
+	border-radius:$br-normal;
 	border: none;
 
 	&::placeholder {
 		font-style: italic;
 	}
-}
-
-ul {
-	list-style: none;
-	padding: 0;
 }
 
 sup {

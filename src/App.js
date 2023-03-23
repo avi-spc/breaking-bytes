@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import StoriesContextProvider from './contexts/storiesContext';
 
-import Navbar from './components/Navbar';
-import SecondaryNavbar from './components/SecondaryNavbar';
-import Stories from './components/Stories';
-import FavoriteStories from './components/FavoriteStories';
-import Events from './components/Events';
+import Navbar from './components/navbar/Navbar';
+import SecondaryNavbar from './components/navbar/SecondaryNavbar';
+import Stories from './components/story/Stories';
+import FavoriteStories from './components/story/FavoriteStories';
+import Events from './components/event/Events';
 
 function App() {
 	return (

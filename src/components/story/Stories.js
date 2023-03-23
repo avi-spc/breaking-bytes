@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 
-import { StoriesContext } from '../contexts/storiesContext';
+import { StoriesContext } from '../../contexts/storiesContext';
 import StoriesCollection from './StoriesCollection';
 
 const Stories = () => {

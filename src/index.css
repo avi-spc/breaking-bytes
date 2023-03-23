@@ -51,10 +51,6 @@ input {
   input::placeholder {
     font-style: italic; }
 
-ul {
-  list-style: none;
-  padding: 0; }
-
 sup {
   font-size: 2.5rem; }
 
@@ -306,7 +302,7 @@ h6 {
 
 .stories__form-p-btn {
   display: flex;
-  gap: 2rem; }
+  gap: 3rem; }
 
 .stories__search-form {
   position: relative;
@@ -330,7 +326,8 @@ h6 {
 
 .stories__search-results-msg {
   margin-top: 6rem;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  font-weight: 300; }
   @media screen and (max-width: 45em) {
     .stories__search-results-msg {
       margin-top: 4rem;
@@ -388,4 +385,4 @@ h6 {
     font-size: 1.6rem;
     padding: 1.7rem 2.8rem;
     border: 0.2rem solid;
-    border-radius: 10rem; }
+    border-radius: 6rem; }

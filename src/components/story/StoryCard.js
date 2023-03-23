@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 
-import { StoriesContext } from '../contexts/storiesContext';
+import { StoriesContext } from '../../contexts/storiesContext';
 import Tag from './Tag';
 
 const StoryCard = ({ story }) => {
