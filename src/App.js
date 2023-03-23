@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import FavoriteStories from './components/FavoriteStories';
 
 import Navbar from './components/Navbar';
+import SecondaryNavbar from './components/SecondaryNavbar';
 import Stories from './components/Stories';
 import StoriesContextProvider from './contexts/storiesContext';
 
@@ -10,7 +12,12 @@ function App() {
 			<StoriesContextProvider>
 				<div className="App">
 					<Navbar />
-					<Stories />
+					<Routes>
+						<Route path="/" element={<Stories />}></Route>
+						<Route path="/favorites" element={<FavoriteStories />}></Route>
+					</Routes>
+
+					<SecondaryNavbar />
 				</div>
 			</StoriesContextProvider>
 		</BrowserRouter>

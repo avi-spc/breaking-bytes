@@ -20,7 +20,7 @@ const MobileNavbar = ({ showMobileNavbar }) => {
 				</li>
 				<li>
 					<NavLink
-						to="/about"
+						to="/events"
 						className="mobile-nav-links"
 						onClick={() => showMobileNavbar()}
 					>

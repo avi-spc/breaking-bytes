@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import DefaultNavlinks from './DefaultNavlinks';
 import SocialNavlinks from './SocialNavlinks';
 import MobileNavbar from './MobileNavbar';
+import SecondaryNavbar from './SecondaryNavbar';
 
 const Navbar = () => {
 	const [visibility, setVisibility] = useState(false);
@@ -24,7 +25,6 @@ const Navbar = () => {
 				onClick={() => showMobileNavbar()}
 			/>
 			{visibility && <MobileNavbar showMobileNavbar={showMobileNavbar} />}
-
 			{/* <SocialNavlinks/> */}
 		</nav>
 	);

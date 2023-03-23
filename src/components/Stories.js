@@ -31,19 +31,24 @@ const Stories = () => {
 	return (
 		<section className="stories">
 			<h2 className="section-header">stories</h2>
-			<form onSubmit={searchStories} className="stories__search-form">
-				<input
-					type="text"
-					value={searchTerm}
-					onChange={(e) => setSearchTerm(e.target.value)}
-					placeholder="search stories here..."
-				/>
-				{isSearched && (
-					<button className="btn input-btn-cancel" onClick={() => setSearchTerm('')}>
-						<img src="/images/cancel_search.png" alt="" />
-					</button>
-				)}
-			</form>
+			<div className="stories__form-p-btn">
+				<form onSubmit={searchStories} className="stories__search-form">
+					<input
+						type="text"
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+						placeholder="search stories here..."
+					/>
+					{isSearched && (
+						<button className="btn input-btn-cancel" onClick={() => setSearchTerm('')}>
+							<img src="/images/cancel_search.png" alt="" />
+						</button>
+					)}
+				</form>
+				<button className="btn btn-search" onClick={searchStories}>
+					<img src="/images/minimized_search_bar.png" alt="" />
+				</button>
+			</div>
 			{isSearched && (
 				<div className="stories__search-results">
 					showing results for: <span>{searchTerm}</span>

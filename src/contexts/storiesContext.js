@@ -25,7 +25,7 @@ const StoriesContextProvider = (props) => {
 			}
 		);
 
-		setStories(data.items);
+		setStories(data.items.splice(0, 3));
 	};
 
 	const populateSearchStories = (stories) => {
