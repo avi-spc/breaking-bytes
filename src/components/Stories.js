@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 
 import { StoriesContext } from '../contexts/storiesContext';
-
 import StoriesCollection from './StoriesCollection';
 
 const Stories = () => {
 	const [searchTerm, setSearchTerm] = useState('');
-	const { stories, searchedStories, populateSearchStories } = useContext(StoriesContext);
 	const [isSearched, setIsSearched] = useState(false);
+	const { stories, searchedStories, populateSearchStories } = useContext(StoriesContext);
 
 	const searchStories = (e) => {
 		e.preventDefault();
@@ -30,7 +29,7 @@ const Stories = () => {
 
 	return (
 		<section className="stories">
-			<h2 className="section-header">stories</h2>
+			<h2 className="section-heading">stories</h2>
 			<div className="stories__form-p-btn">
 				<form onSubmit={searchStories} className="stories__search-form">
 					<input
@@ -42,23 +41,27 @@ const Stories = () => {
 					{isSearched && (
 						<button
 							type="button"
-							className="btn input-btn-cancel"
+							className="btn btn-input-cancel"
 							onClick={() => setSearchTerm('')}
 						>
 							<img src="/images/cancel_search.png" alt="" />
 						</button>
 					)}
 				</form>
-				<button className="btn btn-search" onClick={searchStories}>
+
+				<button className="btn btn--search" onClick={searchStories}>
 					<img src="/images/minimized_search_bar.png" alt="" />
 				</button>
 			</div>
+
 			{isSearched && (
-				<div className="stories__search-results">
+				<div className="stories__search-results-msg">
 					showing results for: <span>{searchTerm}</span>
 				</div>
 			)}
+
 			{stories && !isSearched && <StoriesCollection stories={stories} />}
+			
 			{searchedStories.length > 0 && isSearched && (
 				<StoriesCollection stories={searchedStories} />
 			)}

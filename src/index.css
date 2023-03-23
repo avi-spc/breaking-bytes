@@ -58,10 +58,6 @@ ul {
 sup {
   font-size: 2.5rem; }
 
-.text-small-R {
-  font-size: 1.6rem;
-  font-weight: 400; }
-
 h1 {
   font-size: 14rem;
   font-weight: 700; }
@@ -86,10 +82,10 @@ h6 {
   font-size: 1.6rem;
   font-weight: 600; }
 
-.section-header {
+.section-heading {
   margin-bottom: 6rem; }
   @media screen and (max-width: 45em) {
-    .section-header {
+    .section-heading {
       margin-bottom: 2rem; } }
 
 .text-secondary {
@@ -111,6 +107,9 @@ h6 {
   .btn:hover {
     -webkit-filter: drop-shadow(0 0 0.75rem #65c5d2);
     filter: drop-shadow(0 0 0.75rem #65c5d2); }
+  .btn--search img {
+    width: 10rem;
+    height: auto; }
 
 .events-section {
   padding: 10rem;
@@ -310,7 +309,7 @@ h6 {
 .stories__search-form {
   position: relative;
   flex-basis: 100%; }
-  .stories__search-form .input-btn-cancel {
+  .stories__search-form .btn-input-cancel {
     position: absolute;
     right: 3rem;
     top: 50%;
@@ -318,7 +317,7 @@ h6 {
     line-height: 0;
     border-radius: 4rem; }
     @media screen and (max-width: 45em) {
-      .stories__search-form .input-btn-cancel {
+      .stories__search-form .btn-input-cancel {
         right: 8%; } }
   .stories__search-form img {
     width: 2rem;
@@ -327,33 +326,27 @@ h6 {
       .stories__search-form img {
         right: 3rem; } }
 
-.stories .btn-search {
-  background-color: transparent; }
-  .stories .btn-search img {
-    width: 10rem;
-    height: auto; }
-
-.stories__search-results {
+.stories__search-results-msg {
   margin-top: 6rem;
   font-size: 3.2rem; }
   @media screen and (max-width: 45em) {
-    .stories__search-results {
+    .stories__search-results-msg {
       margin-top: 4rem;
       text-align: center;
       font-size: 2.4rem; } }
-  .stories__search-results span {
+  .stories__search-results-msg span {
     font-weight: 700; }
 
 .stories-collection {
+  margin: 8rem 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3rem;
-  margin: 8rem 0; }
+  gap: 3rem; }
   @media screen and (max-width: 45em) {
     .stories-collection {
+      margin: 4rem 0;
       grid-template-columns: repeat(1, minmax(0, 1fr));
-      gap: 3rem;
-      margin: 4rem 0; } }
+      gap: 3rem; } }
 
 .story-card {
   padding: 2rem;

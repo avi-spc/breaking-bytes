@@ -1,8 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+
 import { StoriesContext } from '../contexts/storiesContext';
 import Tag from './Tag';
 
 const StoryCard = ({ story }) => {
+	const [newsStory] = useState({
+		headline: story.story.headline,
+		authorName: story.story['author-name'].toUpperCase(),
+		timestamp: new Date(story.story['created-at']).toDateString().toUpperCase().substring(4),
+		tags: story.story.tags.slice(0, 2)
+	});
 	const { favoriteStories, dispatch } = useContext(StoriesContext);
 
 	return (
@@ -13,19 +20,15 @@ const StoryCard = ({ story }) => {
 					<h6>GROUND REPORT</h6>
 					<div className="horizontal-bar"></div>
 				</div>
-				<h4 className="story-card__details__headline">{story.story.headline}</h4>
-				<h6 className="text-secondary">{`${story.story[
-					'author-name'
-				].toUpperCase()} • ${new Date(story.story['created-at'])
-					.toDateString()
-					.toUpperCase()
-					.substring(4)}`}</h6>
+				<h4 className="story-card__details__headline">{newsStory.headline}</h4>
+				<h6 className="story-card__details__author-timestamp text-secondary">{`${newsStory.authorName} • ${newsStory.timestamp}`}</h6>
 				<div className="story-card__details__tags-p-like">
 					<div className="tags-collection">
-						{story.story.tags.slice(0, 2).map((tag) => (
+						{newsStory.tags.map((tag) => (
 							<Tag key={tag.id} tagName={tag.name} />
 						))}
 					</div>
+
 					{favoriteStories.includes(story.id) ? (
 						<button
 							className="btn"
