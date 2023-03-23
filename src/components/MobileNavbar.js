@@ -1,33 +1,23 @@
-import { useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const MobileNavbar = ({ showMobileNavbar }) => {
-	const mobileNavbar = useRef();
-
 	return (
-		<div className="mobile-nav" ref={mobileNavbar}>
+		<div className="mobile-nav">
 			<img
 				src="/images/cancel.png"
-				className="mobile-nav-cancel-img"
+				className="mobile-nav__cancel-img"
 				alt=""
 				onClick={() => showMobileNavbar()}
 			/>
-			<ul>
-				<li>
-					<NavLink to="/" className="mobile-nav-links" onClick={() => showMobileNavbar()}>
-						stories
-					</NavLink>
-				</li>
-				<li>
-					<NavLink
-						to="/events"
-						className="mobile-nav-links"
-						onClick={() => showMobileNavbar()}
-					>
-						events
-					</NavLink>
-				</li>
-			</ul>
+			<NavLink to="/" className="mobile-nav__link" onClick={() => showMobileNavbar()}>
+				stories
+			</NavLink>
+			<NavLink to="/events" className="mobile-nav-link" onClick={() => showMobileNavbar()}>
+				events
+			</NavLink>
+			<NavLink to="/favorites" className="mobile-nav-link" onClick={() => showMobileNavbar()}>
+				favorites
+			</NavLink>
 		</div>
 	);
 };

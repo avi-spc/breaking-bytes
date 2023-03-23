@@ -110,6 +110,9 @@ h6 {
   .btn--search img {
     width: 10rem;
     height: auto; }
+  .btn--secondary img {
+    width: 8rem;
+    height: auto; }
 
 .events-section {
   padding: 10rem;
@@ -231,10 +234,10 @@ h6 {
   @media screen and (max-width: 45em) {
     .navbar .app_logo {
       width: 15rem; } }
-  .navbar .hamburger_icon {
+  .navbar .hamburger {
     display: none; }
     @media screen and (max-width: 45em) {
-      .navbar .hamburger_icon {
+      .navbar .hamburger {
         display: block;
         width: 6rem; } }
   .navbar .default-nav-links,
@@ -251,27 +254,29 @@ h6 {
         display: none; } }
 
 .mobile-nav {
-  position: fixed;
-  left: 0;
-  padding: 4rem;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  background-color: #b7d4d8;
-  z-index: 2; }
-
-.mobile-nav-links {
-  display: inline-block;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  text-decoration: none;
-  color: white; }
-
-.mobile-nav-cancel-img {
-  max-width: 5.2rem;
-  margin-bottom: 2.5rem;
-  padding: 0;
-  cursor: pointer; }
+  display: none; }
+  @media screen and (max-width: 45em) {
+    .mobile-nav {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding: 4rem;
+      width: 100vw;
+      height: 100vh;
+      background-color: #b7d4d8;
+      z-index: 2;
+      display: flex;
+      flex-direction: column; }
+      .mobile-nav > a:not(:first-of-type) {
+        margin-top: 2rem; }
+      .mobile-nav__cancel-img {
+        width: 7rem;
+        margin-bottom: 4rem;
+        padding: 0;
+        cursor: pointer;
+        -webkit-filter: invert(100%);
+        filter: invert(100%); } }
 
 .navbar-secondary {
   display: none; }
@@ -294,9 +299,6 @@ h6 {
       .navbar-secondary .btn-secondary {
         background-color: transparent;
         line-height: 0; }
-      .navbar-secondary img {
-        width: 8rem;
-        height: auto; }
       .navbar-secondary .active {
         font-weight: 700; }
         .navbar-secondary .active img {

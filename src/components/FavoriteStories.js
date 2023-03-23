@@ -13,7 +13,8 @@ const FavoriteStories = () => {
 
 	return (
 		<section className="stories">
-			<h2 className="section-header">favorites</h2>
+			<h2 className="section-heading">favorites</h2>
+			
 			{favoriteStories.length > 0 ? (
 				<StoriesCollection stories={extractFavoriteStories()} />
 			) : (
