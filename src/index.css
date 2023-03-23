@@ -8,20 +8,38 @@
 
 html {
   font-size: 50%; }
+  @media screen and (max-width: 67.5em) {
+    html {
+      font-size: 45%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 40%; } }
+  @media screen and (max-width: 45em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: 'Sora', sans-serif;
-  background-color: #B7D4D8; }
+  background-color: #b7d4d8; }
 
 a,
 a:link,
 a:hover,
 a:visited {
   text-decoration: none;
-  color: #000; }
+  color: #000000; }
 
 section {
   padding: 0 20rem; }
+  @media screen and (max-width: 67.5em) {
+    section {
+      padding: 0 15rem; } }
+  @media screen and (max-width: 56.25em) {
+    section {
+      padding: 0 7.5rem; } }
+  @media screen and (max-width: 45em) {
+    section {
+      padding: 0 3rem; } }
 
 input {
   font-size: 2.4rem;
@@ -32,6 +50,10 @@ input {
   border: none; }
   input::placeholder {
     font-style: italic; }
+
+ul {
+  list-style: none;
+  padding: 0; }
 
 .text-small-R {
   font-size: 1.6rem;
@@ -51,6 +73,9 @@ h6 {
 
 .section-header {
   margin-bottom: 6rem; }
+  @media screen and (max-width: 45em) {
+    .section-header {
+      margin-bottom: 2rem; } }
 
 .text-secondary {
   color: #555353; }
@@ -62,7 +87,7 @@ h6 {
   width: 15%;
   height: 0.8rem;
   border-radius: 5rem;
-  background-color: #B7D4D8; }
+  background-color: #b7d4d8; }
 
 .btn {
   border: none;
@@ -75,15 +100,81 @@ h6 {
   align-items: center;
   font-size: 2.4rem;
   padding: 6rem 20rem; }
+  @media screen and (max-width: 67.5em) {
+    .navbar {
+      padding: 6rem 15rem; } }
+  @media screen and (max-width: 56.25em) {
+    .navbar {
+      padding: 6rem 7.5rem; } }
+  @media screen and (max-width: 45em) {
+    .navbar {
+      padding: 3rem 3rem; } }
+  @media screen and (max-width: 45em) {
+    .navbar .app_logo {
+      width: 15rem; } }
+  @media screen and (max-width: 45em) {
+    .navbar .hamburger_icon {
+      display: block;
+      width: 6rem; } }
   .navbar .default-nav-links {
     display: flex;
     gap: 4rem; }
+    @media screen and (max-width: 45em) {
+      .navbar .default-nav-links {
+        display: none; } }
+
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  padding: 4rem;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #b7d4d8;
+  z-index: 2; }
+
+.mobile-nav-links {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: white; }
+
+.mobile-nav-cancel-img {
+  max-width: 5.2rem;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  cursor: pointer; }
+
+.stories__search-form {
+  position: relative; }
+  .stories__search-form .input-btn-cancel {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    border-radius: 4rem; }
+  .stories__search-form img {
+    width: 8rem;
+    height: auto; }
+
+.stories__search-results {
+  margin-top: 6rem;
+  font-size: 3.2rem; }
+  .stories__search-results span {
+    font-weight: 700; }
 
 .stories-collection {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3rem;
   margin: 8rem 0; }
+  @media screen and (max-width: 45em) {
+    .stories-collection {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 3rem;
+      margin: 6rem 0; } }
 
 .story-card {
   padding: 2rem;
@@ -93,7 +184,10 @@ h6 {
   .story-card__image {
     height: 35rem;
     border-radius: 4.5rem;
-    background-color: #65C5D2; }
+    background-color: #313131; }
+    @media screen and (max-width: 45em) {
+      .story-card__image {
+        height: 25rem; } }
   .story-card__details {
     display: flex;
     flex-direction: column;

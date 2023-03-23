@@ -7,8 +7,65 @@
 
 	padding: 6rem 20rem;
 
+	@include responsive(tablet_l) {
+		padding: 6rem 15rem;
+	}
+
+	@include responsive(tablet_p) {
+		padding: 6rem 7.5rem;
+	}
+
+	@include responsive(phone) {
+		padding: 3rem 3rem;
+	}
+
+	.app_logo {
+		@include responsive(phone) {
+			width: 15rem;
+		}
+	}
+
+	.hamburger_icon {
+		// display: none;
+
+		@include responsive(phone) {
+			display: block;
+			width: 6rem;
+		}
+	}
+
 	.default-nav-links {
-        display: flex;
-        gap: 4rem;
+		display: flex;
+		gap: 4rem;
+
+		@include responsive(phone) {
+			display: none;
+		}
 	}
 }
+
+.mobile-nav {
+	position: fixed;
+	left: 0;
+	padding: 4rem;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	background-color: $color-background;
+	z-index: 2;
+  }
+  
+  .mobile-nav-links {
+	display: inline-block;
+	margin-left: 0.5rem;
+	margin-top: 0.5rem;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+  }
+  
+  .mobile-nav-cancel-img {
+	max-width: 5.2rem;
+	margin-bottom: 2.5rem;
+	padding: 0;
+	cursor: pointer;
+  }

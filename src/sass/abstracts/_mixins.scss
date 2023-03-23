@@ -1,12 +1,18 @@
 @mixin responsive($breakpoint) {
 	@if ($breakpoint==phone) {
-		@media screen and (max-width: 37.5em) {
+		@media screen and (max-width: 45em) {
 			@content;
 		}
 	}
 
-	@if ($breakpoint==laptop_s) {
-		@media screen and (max-width: 73.75em) {
+	@if ($breakpoint==tablet_l) {
+		@media screen and (max-width: 67.5em) {
+			@content;
+		}
+	}
+
+	@if ($breakpoint==tablet_p) {
+		@media screen and (max-width: 56.25em) {
 			@content;
 		}
 	}

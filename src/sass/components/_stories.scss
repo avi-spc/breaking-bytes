@@ -1,9 +1,44 @@
+.stories {
+	&__search-form {
+		position: relative;
+
+		.input-btn-cancel {
+			position: absolute;
+			right: 1%;
+			top: 50%;
+			transform: translateY(-50%);
+			line-height: 0;
+
+			border-radius: 4rem;
+		}
+
+		img {
+			width: 8rem;
+			height: auto;
+		}
+	}
+
+	&__search-results {
+		margin-top: 6rem;
+		font-size: 3.2rem;
+
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
 .stories-collection {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 3rem;
-
 	margin: 8rem 0;
+
+	@include responsive(phone) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: 3rem;
+		margin: 6rem 0;
+	}
 }
 
 .story-card {
@@ -16,7 +51,11 @@
 	&__image {
 		height: 35rem;
 		border-radius: 4.5rem;
-		background-color: $color-accent-primary;
+		background-color: $color-accent-placeholder;
+
+		@include responsive(phone) {
+			height: 25rem;
+		}
 	}
 
 	&__details {
