@@ -20,16 +20,17 @@ const Stories = () => {
 
 	return (
 		<section className="stories">
-			<h2>stories</h2>
+			<h2 className="section-header">stories</h2>
 			<form onSubmit={searchStories}>
 				<input
 					type="text"
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
+					placeholder="search stories here..."
 				/>
 			</form>
 			{stories && searchedStories.length === 0 && <StoriesCollection stories={stories} />}
-			{searchStories.length > 0 && <StoriesCollection stories={searchedStories} />}
+			{/* {searchStories.length > 0 && <StoriesCollection stories={searchedStories} />} */}
 		</section>
 	);
 };

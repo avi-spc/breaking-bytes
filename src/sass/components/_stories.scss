@@ -1,0 +1,61 @@
+.stories-collection {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 3rem;
+
+	margin: 8rem 0;
+}
+
+.story-card {
+	padding: 2rem;
+	border-radius: 5rem;
+	background-color: $color-surface-primary;
+
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+
+	&__image {
+		height: 35rem;
+		border-radius: 4.5rem;
+		background-color: $color-accent-primary;
+	}
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		font-size: 1.6rem;
+		padding: 3rem 2rem 2rem;
+
+		&__category {
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+
+			flex: 0 0 auto;
+		}
+
+		&__tags-p-like {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 4rem;
+
+			img {
+				width: 6rem;
+				height: auto;
+			}
+
+			.tags-collection {
+				display: flex;
+				gap: 2rem;
+			}
+		}
+	}
+
+	&__tag {
+		font-size: 1.6rem;
+		padding: 1.7rem 2.8rem;
+		border: 0.2rem solid;
+		border-radius: 10rem;
+	}
+}

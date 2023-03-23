@@ -6,8 +6,10 @@ const Navbar = () => {
 	return (
 		<nav className="navbar">
 			<DefaultNavlinks/>
-            <img src="" alt="" />
-            <SocialNavlinks/>
+            <img src="/images/app_logo.png" alt="" />
+            <img src="/images/hamburger_menu.png" alt="" />
+
+            {/* <SocialNavlinks/> */}
 		</nav>
 	);
 };

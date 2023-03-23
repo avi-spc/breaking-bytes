@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 50%; }
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #B7D4D8; }
+
+a,
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #000; }
+
+section {
+  padding: 0 20rem; }
+
+input {
+  font-size: 2.4rem;
+  padding: 3.5rem 3rem;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+  border-radius: 4rem;
+  border: none; }
+  input::placeholder {
+    font-style: italic; }
+
+.text-small-R {
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+h2 {
+  font-size: 9.6rem;
+  font-weight: 700; }
+
+h4 {
+  font-size: 3.2rem;
+  font-weight: 600; }
+
+h6 {
+  font-size: 1.6rem;
+  font-weight: 600; }
+
+.section-header {
+  margin-bottom: 6rem; }
+
+.text-secondary {
+  color: #555353; }
+
+.active {
+  font-weight: 700; }
+
+.horizontal-bar {
+  width: 15%;
+  height: 0.8rem;
+  border-radius: 5rem;
+  background-color: #B7D4D8; }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #fff; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.4rem;
+  padding: 6rem 20rem; }
+  .navbar .default-nav-links {
+    display: flex;
+    gap: 4rem; }
+
+.stories-collection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  margin: 8rem 0; }
+
+.story-card {
+  padding: 2rem;
+  border-radius: 5rem;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2); }
+  .story-card__image {
+    height: 35rem;
+    border-radius: 4.5rem;
+    background-color: #65C5D2; }
+  .story-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.6rem;
+    padding: 3rem 2rem 2rem; }
+    .story-card__details__category {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex: 0 0 auto; }
+    .story-card__details__tags-p-like {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem; }
+      .story-card__details__tags-p-like img {
+        width: 6rem;
+        height: auto; }
+      .story-card__details__tags-p-like .tags-collection {
+        display: flex;
+        gap: 2rem; }
+  .story-card__tag {
+    font-size: 1.6rem;
+    padding: 1.7rem 2.8rem;
+    border: 0.2rem solid;
+    border-radius: 10rem; }

@@ -9,6 +9,7 @@ function App() {
 		<BrowserRouter>
 			<StoriesContextProvider>
 				<div className="App">
+					<Navbar />
 					<Stories />
 				</div>
 			</StoriesContextProvider>

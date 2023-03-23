@@ -1,0 +1,19 @@
+.section-header {
+	margin-bottom: 6rem;
+}
+
+.text-secondary {
+    color: $color-text-secondary;
+}
+
+.active {
+	font-weight: 700;
+}
+
+.horizontal-bar {
+	width: 15%;
+	height: 0.8rem;
+
+	border-radius: 5rem;
+	background-color: $color-accent-secondary;
+}
