@@ -16,7 +16,6 @@ function App() {
 						<Route path="/" element={<Stories />}></Route>
 						<Route path="/favorites" element={<FavoriteStories />}></Route>
 					</Routes>
-
 					<SecondaryNavbar />
 				</div>
 			</StoriesContextProvider>

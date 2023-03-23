@@ -1,5 +1,10 @@
 .btn {
 	border: none;
 	cursor: pointer;
-	background-color: #fff;
+	background-color: transparent;
+
+	&:hover {
+		-webkit-filter: drop-shadow(0 0 0.75rem #65c5d2);
+		filter: drop-shadow(0 0 0.75rem #65c5d2);
+	}
 }

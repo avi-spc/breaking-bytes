@@ -92,7 +92,10 @@ h6 {
 .btn {
   border: none;
   cursor: pointer;
-  background-color: #fff; }
+  background-color: transparent; }
+  .btn:hover {
+    -webkit-filter: drop-shadow(0 0 0.75rem #65c5d2);
+    filter: drop-shadow(0 0 0.75rem #65c5d2); }
 
 .navbar {
   display: flex;
@@ -112,15 +115,23 @@ h6 {
   @media screen and (max-width: 45em) {
     .navbar .app_logo {
       width: 15rem; } }
-  @media screen and (max-width: 45em) {
-    .navbar .hamburger_icon {
-      display: block;
-      width: 6rem; } }
-  .navbar .default-nav-links {
-    display: flex;
-    gap: 4rem; }
+  .navbar .hamburger_icon {
+    display: none; }
     @media screen and (max-width: 45em) {
-      .navbar .default-nav-links {
+      .navbar .hamburger_icon {
+        display: block;
+        width: 6rem; } }
+  .navbar .default-nav-links,
+  .navbar .social-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem; }
+    .navbar .default-nav-links img,
+    .navbar .social-nav-links img {
+      width: 4rem; }
+    @media screen and (max-width: 45em) {
+      .navbar .default-nav-links,
+      .navbar .social-nav-links {
         display: none; } }
 
 .mobile-nav {
@@ -147,25 +158,33 @@ h6 {
   cursor: pointer; }
 
 .navbar-secondary {
-  position: fixed;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  border-radius: 4rem;
-  padding: 1rem;
-  background-color: #b7d4d8;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2); }
-  .navbar-secondary .btn-secondary {
-    background-color: transparent;
-    line-height: 0; }
-  .navbar-secondary img {
-    width: 8rem;
-    height: auto;
-    filter: invert(100%); }
+  display: none; }
+  @media screen and (max-width: 45em) {
+    .navbar-secondary {
+      display: block;
+      position: fixed;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      border-radius: 4rem;
+      padding: 1rem;
+      background-color: #b7d4d8;
+      border: thin solid;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2); }
+      .navbar-secondary .btn-secondary {
+        background-color: transparent;
+        line-height: 0; }
+      .navbar-secondary img {
+        width: 8rem;
+        height: auto; }
+      .navbar-secondary .active {
+        font-weight: 700; }
+        .navbar-secondary .active img {
+          filter: invert(100%); } }
 
 .stories__form-p-btn {
   display: flex;

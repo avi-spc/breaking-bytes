@@ -1,13 +1,13 @@
 .section-header {
 	margin-bottom: 6rem;
 
-	@include responsive(phone){
+	@include responsive(phone) {
 		margin-bottom: 2rem;
 	}
 }
 
 .text-secondary {
-    color: $color-text-secondary;
+	color: $color-text-secondary;
 }
 
 .active {

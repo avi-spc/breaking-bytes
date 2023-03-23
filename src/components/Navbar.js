@@ -25,7 +25,7 @@ const Navbar = () => {
 				onClick={() => showMobileNavbar()}
 			/>
 			{visibility && <MobileNavbar showMobileNavbar={showMobileNavbar} />}
-			{/* <SocialNavlinks/> */}
+			<SocialNavlinks />
 		</nav>
 	);
 };

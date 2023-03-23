@@ -14,9 +14,12 @@ const StoryCard = ({ story }) => {
 					<div className="horizontal-bar"></div>
 				</div>
 				<h4 className="story-card__details__headline">{story.story.headline}</h4>
-				<h6 className="text-secondary">{`${story.story['author-name'].toUpperCase()} • ${
-					story.story['created-at']
-				}`}</h6>
+				<h6 className="text-secondary">{`${story.story[
+					'author-name'
+				].toUpperCase()} • ${new Date(story.story['created-at'])
+					.toDateString()
+					.toUpperCase()
+					.substring(4)}`}</h6>
 				<div className="story-card__details__tags-p-like">
 					<div className="tags-collection">
 						{story.story.tags.slice(0, 2).map((tag) => (
@@ -24,11 +27,17 @@ const StoryCard = ({ story }) => {
 						))}
 					</div>
 					{favoriteStories.includes(story.id) ? (
-						<button className='btn' onClick={() => dispatch({ type: 'REMOVE_FAVORITE', id: story.id })}>
+						<button
+							className="btn"
+							onClick={() => dispatch({ type: 'REMOVE_FAVORITE', id: story.id })}
+						>
 							<img src="/images/favorite_icon_filled.png" alt="" />
 						</button>
 					) : (
-						<button className='btn' onClick={() => dispatch({ type: 'ADD_FAVORITE', id: story.id })}>
+						<button
+							className="btn"
+							onClick={() => dispatch({ type: 'ADD_FAVORITE', id: story.id })}
+						>
 							<img src="/images/favorite_icon_base.png" alt="" />
 						</button>
 					)}

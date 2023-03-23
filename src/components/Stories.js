@@ -40,7 +40,11 @@ const Stories = () => {
 						placeholder="search stories here..."
 					/>
 					{isSearched && (
-						<button className="btn input-btn-cancel" onClick={() => setSearchTerm('')}>
+						<button
+							type="button"
+							className="btn input-btn-cancel"
+							onClick={() => setSearchTerm('')}
+						>
 							<img src="/images/cancel_search.png" alt="" />
 						</button>
 					)}
