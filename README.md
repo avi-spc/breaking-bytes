@@ -44,6 +44,7 @@ npm run sass
 #### Stories
 
 ![Stories](./designs/stories.png)
+![StoriesMobile](./designs/stories-mobile.png)
 
 #### Events
 
