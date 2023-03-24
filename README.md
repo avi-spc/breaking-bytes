@@ -1,6 +1,6 @@
-# nudge
+# Breaking Bytes
 
-![Logo](./public/img/logo.png)
+![Logo](./public/images/app_logo.png)
 
 ### About
 
