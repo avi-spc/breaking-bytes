@@ -1,6 +1,6 @@
 # Breaking Bytes
 
-![Logo](./public/images/app_logo.png)
+![Logo](./designs/logo.png)
 
 ### About
 
@@ -51,4 +51,4 @@ npm run sass
 
 #### Paywall Popup
 
-![Paywall](./designs/paywall.png)
+![Paywall](./designs/payments.png)
