@@ -117,7 +117,13 @@ h6 {
   border-top-left-radius: 10rem;
   border-top-right-radius: 10rem;
   font-size: 2.2rem; }
+  .events-section .events-about {
+    width: 70%;
+    margin-bottom: 10rem; }
+    .events-section .events-about__content {
+      margin-top: 4rem; }
   .events-section .recent-event {
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: 65% 1fr;
     gap: 5rem; }
@@ -134,7 +140,8 @@ h6 {
     .events-section .recent-event__impact-data {
       display: flex;
       gap: 5rem;
-      margin-top: 8rem; }
+      margin-top: 8rem;
+      margin-bottom: 10rem; }
     .events-section .recent-event__data {
       display: flex;
       gap: 2.5rem;
@@ -148,15 +155,9 @@ h6 {
     .events-section .recent-event img {
       width: 100%; }
   .events-section .upcoming-events {
-    margin-top: 15rem;
     display: flex;
     flex-direction: column;
     gap: 8rem; }
-    .events-section .upcoming-events__heading {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      flex: 0 0 auto; }
     .events-section .upcoming-events__cards {
       display: flex;
       gap: 5rem; }
@@ -187,30 +188,90 @@ h6 {
     gap: 4rem;
     padding: 8rem;
     border-radius: 10rem;
-    background-color: #b7d4d8; }
+    background-color: #b7d4d8;
+    margin-top: 10rem; }
     .events-section .speakers-accolades__heading {
       grid-column: 1 / span 2; }
-    .events-section .speakers-accolades .speaker-image {
-      margin-top: 2rem;
-      width: 15rem;
-      height: 15rem;
-      border-radius: 50%;
-      background-color: #65c5d2;
-      grid-row: 2/3; }
     .events-section .speakers-accolades .speaker-quote {
       font-size: 2.4rem;
       grid-row: 3/4;
       grid-column: 1 / 6; }
     .events-section .speakers-accolades .next-previous {
       grid-row: 4/-1; }
-    .events-section .speakers-accolades img {
-      filter: invert(100%); }
+      .events-section .speakers-accolades .next-previous img {
+        filter: invert(100%); }
+  .events-section .partners {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; }
+    .events-section .partners__logos {
+      display: flex;
+      justify-content: center;
+      gap: 5rem; }
+  .events-section .ready-msg {
+    padding: 23rem 10.5rem;
+    width: 80%;
+    margin: 20rem auto;
+    border: thin solid;
+    border-radius: 30rem;
+    text-align: center; }
+  .events-section .speaker-image {
+    margin-top: 2rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: #65c5d2;
+    grid-row: 2/3;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.5); }
   .events-section .button-collection {
     display: flex;
     gap: 3rem;
     align-self: center; }
     .events-section .button-collection img {
       width: 4rem; }
+  .events-section footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem;
+    align-items: start; }
+    .events-section footer .quick-links {
+      grid-column: 1 / span 2;
+      justify-self: start; }
+      .events-section footer .quick-links .links {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; }
+  .events-section .links a {
+    font-weight: 400; }
+  .events-section .newsletter input {
+    background-color: #b7d4d8;
+    display: inline; }
+  .events-section .newsletter__form {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2.5rem; }
+  .events-section .copyright {
+    padding: 1.2rem 1.5rem;
+    border: 0.2rem solid;
+    border-radius: 10rem;
+    justify-self: start;
+    align-self: center; }
+  .events-section .social-links {
+    grid-column: 3/-1;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    align-self: center; }
+    .events-section .social-links img {
+      width: 5rem; }
+
+.separator-heading {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex: 0 0 auto; }
 
 .navbar {
   display: flex;
